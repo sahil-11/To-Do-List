@@ -159,13 +159,15 @@ app.get("/:customListName" , function(req,res){
  });
 
 
+let port = process.env.PORT;
+if(port === NULL || port === "")
+port = 3000;
 
-
-app.listen(process.env.PORT || 3000 , function()
+app.listen(port , function()
 {
     console.log("Server is running on port 3000");
 })
-
+// 4da4e3b4-6dc6-42ee-b45d-892bd1225fa8
 // mongo db atlas 
 //id sv81639
 // password S2011491981t
