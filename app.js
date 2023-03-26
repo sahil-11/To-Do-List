@@ -16,7 +16,7 @@ app.use(express.static(__dirname + "/public/"));
 main().catch(err => console.log(err));
 
 async function main() {
-    await mongoose.connect("mongodb+srv://sv81639:S2011491981t@cluster0.dzzhrod.mongodb.net/todolistDB" , {useNewUrlParser : true});
+    await mongoose.connect("mongodb+srv://process.env.username:process.env.password@cluster0.dzzhrod.mongodb.net/todolistDB" , {useNewUrlParser : true});
 }
 
 const itemsSchema = ({
